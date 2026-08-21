@@ -1,0 +1,3 @@
+requests
+gmssl
+av>=12.0

@@ -1,0 +1,159 @@
+{
+  "last_node_id": 3,
+  "last_link_id": 1,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "DouyinDownload1080P",
+      "pos": [80, 120],
+      "size": [420, 260],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source_url",
+          "type": "STRING",
+          "widget": {
+            "name": "source_url"
+          },
+          "link": null
+        },
+        {
+          "name": "cookie",
+          "type": "STRING",
+          "widget": {
+            "name": "cookie"
+          },
+          "link": null
+        },
+        {
+          "name": "quality",
+          "type": "COMBO",
+          "widget": {
+            "name": "quality"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": [1],
+          "slot_index": 0
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": null,
+          "slot_index": 1
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null,
+          "slot_index": 2
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "links": null,
+          "slot_index": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DouyinDownload1080P"
+      },
+      "widgets_values": [
+        "请替换为抖音视频链接",
+        "",
+        "1080p"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "SaveVideo",
+      "pos": [560, -20],
+      "size": [270, 106],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 1
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "name": "format",
+          "type": "COMBO",
+          "widget": {
+            "name": "format"
+          },
+          "link": null
+        },
+        {
+          "name": "codec",
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "widget": {
+            "name": "codec"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.31.0",
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "Note",
+      "pos": [560, 130],
+      "size": [360, 250],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "验证步骤：\n1. 在节点中填入真实抖音视频链接。\n2. 粘贴 Cookie。\n3. 选择 480p、720p 或 1080p。\n4. 点击 Queue Prompt。\n5. video 输出是原生 VIDEO，可直接连接 SaveVideo；image 输出是视频帧，audio 输出是音频，fps 输出是帧率。\n\n如果作品没有所选清晰度，节点会自动选择最高可用清晰度。"
+      ]
+    }
+  ],
+  "links": [
+    [1, 1, 0, 3, 0, "VIDEO"]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [0, 0]
+    }
+  },
+  "version": 0.4
+}

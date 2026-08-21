@@ -1,0 +1,26 @@
+.venv/
+__pycache__/
+*.py[cod]
+
+# Local configuration and credentials
+config.ini
+config.txt
+.env
+.env.*
+*.cookie
+cookie.txt
+cookies.txt
+
+# Runtime output and downloaded media
+output/
+downloads/
+build/
+dist/
+*.log
+*.mp4
+*.webm
+*.mov
+*.mkv
+*.avi
+*.xlsx
+*.xls
