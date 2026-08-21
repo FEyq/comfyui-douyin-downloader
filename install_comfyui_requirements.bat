@@ -1,7 +1,7 @@
 @echo off
 setlocal
 cd /d "%~dp0"
-title Install Douyin ComfyUI Dependencies
+title Install Music Note ComfyUI Dependencies
 
 set "PYTHON="
 if exist "%~dp0..\..\python_embeded\python.exe" set "PYTHON=%~dp0..\..\python_embeded\python.exe"

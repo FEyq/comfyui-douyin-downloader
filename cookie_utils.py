@@ -1,4 +1,4 @@
-"""Local Cookie helpers used by the standalone Douyin Cookie tool."""
+"""Local Cookie helpers used by the standalone Music Note Cookie tool."""
 
 from __future__ import annotations
 
@@ -32,7 +32,7 @@ def normalize_cookie(value: str) -> str:
 
 
 def validate_cookie(value: str) -> tuple[bool, str]:
-    """Check that a Cookie contains a Douyin login session field."""
+    """Check that a Cookie contains a target-platform login session field."""
     normalized = normalize_cookie(value)
     items = {}
     for item in normalized.split("; "):

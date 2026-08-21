@@ -1,7 +1,7 @@
 @echo off
 setlocal
 cd /d "%~dp0"
-title Check Douyin ComfyUI Node
+title Check Music Note ComfyUI Node
 
 set "PYTHON="
 if exist "%~dp0..\..\python_embeded\python.exe" set "PYTHON=%~dp0..\..\python_embeded\python.exe"

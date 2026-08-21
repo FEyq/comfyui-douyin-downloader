@@ -1,4 +1,4 @@
-"""Standalone Douyin API and 1080p-first downloader for the ComfyUI node."""
+"""Standalone target-platform API and 1080p-first downloader for the ComfyUI node."""
 
 import os
 import re
@@ -187,7 +187,7 @@ def _get_json(session, url, timeout=30):
     status_code = data.get("status_code")
     if status_code not in (None, 0):
         raise RuntimeError(
-            f"Douyin API error: status_code={status_code}, "
+            f"Target platform API error: status_code={status_code}, "
             f"message={data.get('status_msg', '')}"
         )
     return data
@@ -287,7 +287,7 @@ def fetch_aweme(source_url, cookie, video_index=0, max_pages=10):
     sec_user_id = extract_sec_user_id(resolved_url) or extract_sec_user_id(source_url)
     if not sec_user_id:
         raise RuntimeError(
-            "无法从链接中解析视频 ID 或 sec_user_id，请输入抖音视频链接、主页链接或分享链接"
+            "无法从链接中解析视频 ID 或 sec_user_id，请输入音符视频链接、主页链接或分享链接"
         )
 
     base_url = "https://www.douyin.com/aweme/v1/web/aweme/post/"

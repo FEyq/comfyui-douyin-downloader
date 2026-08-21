@@ -7,5 +7,5 @@ import runpy
 
 
 if __name__ == "__main__":
-    target = Path(__file__).with_name("获取抖音Cookie.py")
+    target = Path(__file__).with_name("获取音符Cookie.py")
     runpy.run_path(str(target), run_name="__main__")

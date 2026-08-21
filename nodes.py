@@ -1,4 +1,4 @@
-"""ComfyUI node entry points for the standalone Douyin downloader."""
+"""ComfyUI node entry points for the standalone Music Note downloader."""
 
 import os
 
@@ -22,9 +22,9 @@ except ImportError:
 
 
 class DouyinDownload1080P:
-    """Download a Douyin video and expose native video, frames, audio and FPS."""
+    """Download a target-platform video and expose native video, frames, audio and FPS."""
 
-    CATEGORY = "video/douyin"
+    CATEGORY = "video/音符"
     FUNCTION = "download"
     # ComfyUI 0.31+ accepts the file-backed native VIDEO object returned by
     # InputImpl.VideoFromFile.  This can connect directly to SaveVideo.
@@ -43,7 +43,7 @@ class DouyinDownload1080P:
                     {
                         "default": "",
                         "multiline": False,
-                        "placeholder": "抖音视频链接",
+                        "placeholder": "音符视频链接",
                     },
                 ),
                 "cookie": (
@@ -91,5 +91,5 @@ NODE_CLASS_MAPPINGS = {
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "DouyinDownload1080P": "抖音视频下载（480/720/1080p）",
+    "DouyinDownload1080P": "音符视频提取（480/720/1080p）",
 }
